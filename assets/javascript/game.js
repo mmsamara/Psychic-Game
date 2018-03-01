@@ -6,10 +6,12 @@ var wins = 0;
 var losses = 0;
 var guessesLeft = 10;
 
+var gameGuess = letterArray[Math.floor(Math.random() * letterArray.length)];
+
 document.onkeyup = function(event) {
-	var gameGuess = letterArray[Math.floor(Math.random() * letterArray.length)];
 
 	var userGuess = event.key;
+	userGuess = userGuess.toLowerCase();
 
 	var userGuessPrint = document.getElementById("guesses-so-far-area");
 	var newGuess = document.createElement("span");
